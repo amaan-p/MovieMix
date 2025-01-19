@@ -8,6 +8,7 @@ Ever felt overwhelmed trying to find where to watch something? Same here. I buil
 - I was tired of jumping between different streaming sites
 - Movies are my escape when things get tough
 - Wanted something simple that just works on laptops
+- I didn't want to deal with signing up or entering personal information just to watch a movie
 - Thought others might find it useful too
 
 ## 🎯 Features
@@ -16,7 +17,6 @@ Ever felt overwhelmed trying to find where to watch something? Same here. I buil
 - 🎲 Random movie picker when you can't decide
 - 📊 Detailed movie info and ratings
 - 📺 Streaming availability
-- 🎬 Movie trailers and previews
 - 🔄 Daily updated trending movies
 
 ## ⚠️ About Ads
@@ -61,14 +61,6 @@ All contributions are welcome! Here's how:
 4. Submit a pull request
 
 No contribution is too small. Even fixing a typo helps!
-
-## 🛠️ Future Ideas
-- Add TV shows support
-- Better mobile experience
-- More streaming services
-- User watchlists
-- Rating system
-- Your idea here!
 
 ## ❤️ Support
 
