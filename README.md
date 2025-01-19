@@ -1,4 +1,4 @@
-# 🎬 MovieFlix
+# 🎬 MOVIEMIX
 
 Born from movie nights and laptop struggles - a simple solution to find where to watch your favorite films. Because sometimes, you just need to escape into a good movie without the endless search.
 
