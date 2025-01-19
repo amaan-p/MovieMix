@@ -39,7 +39,7 @@ const HeroCarousel = ({ movies}) => {
   const currentMovie = movies[currentIndex];
 
   return (
-    <div className="px-8 md:px-16 pt-8">
+    <div className="px-4 md:px-16 pt-8">
       <div className="rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm relative">
         {/* Navigation Buttons */}
         <button

@@ -30,7 +30,7 @@ const Home = () => {
         <HeroCarousel movies={movies.slice(0,4)}/>
 
         {/* Movies Grid Section */}
-        <div className=" px-8 md:px-12 pt-8 relative">
+        <div className=" px-4 md:px-12 pt-8 relative">
           <h2 className="text-[4vw] md:text-[2.3vw]  text-white font-bold mb-4 md:p-3">
             Trending Now
           </h2>

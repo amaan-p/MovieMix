@@ -56,7 +56,7 @@ const SpecificSearchPage = () => {
 
   return (
     <div className="min-h-screen text-white">
-      <div className="px-8 md:px-12 pt-8">
+      <div className="px-4 md:px-12 pt-8">
         <h2 className="text-[4vw] md:text-[2.3vw] font-bold mb-4">
           Showing Results for &quot;{moviename} &quot;
         </h2>
