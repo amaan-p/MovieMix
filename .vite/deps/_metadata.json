@@ -2,7 +2,36 @@
   "hash": "d6766b14",
   "configHash": "62d0275c",
   "lockfileHash": "3727b06c",
-  "browserHash": "1039c115",
-  "optimized": {},
-  "chunks": {}
+  "browserHash": "cda813ae",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/.pnpm/react@18.3.1/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "8d635bf9",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bdb079d4",
+      "needsInterop": true
+    },
+    "react-router": {
+      "src": "../../node_modules/.pnpm/react-router@7.1.3_react-dom@18.3.1_react@18.3.1/node_modules/react-router/dist/development/index.mjs",
+      "file": "react-router.js",
+      "fileHash": "c43a89d7",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/.pnpm/lucide-react@0.469.0_react@18.3.1/node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "408e869c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-OGQ2Q4H2": {
+      "file": "chunk-OGQ2Q4H2.js"
+    }
+  }
 }

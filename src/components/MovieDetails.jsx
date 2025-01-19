@@ -9,7 +9,7 @@ const MovieDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/moviedetails?id=${id}`)
+    fetch(`/api/moviedetails?id=${id}`)
       .then((res) => res.json())
       .then((data) => {
         setMoviesData(data); // Assume the backend sends enriched movie data

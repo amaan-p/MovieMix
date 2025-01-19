@@ -7,7 +7,7 @@ const Searchpage = () => {
 
   // Fetch trending movies on initial load
   useEffect(() => {
-    fetch("http://localhost:5000/top_rated")
+    fetch("/api/top_rated")
       .then((res) => res.json())
       .then((data) => {
         setMoviesData(data.results);

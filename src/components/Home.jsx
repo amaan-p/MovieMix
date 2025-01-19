@@ -7,7 +7,8 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/live")
+    //const BASE_URL =  "http://localhost:5000";
+    fetch("/api/live")
       .then((res) => res.json())
       .then((data) => {
         setMoviesData(data); // Assume the backend sends enriched movie data

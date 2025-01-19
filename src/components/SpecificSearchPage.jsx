@@ -25,7 +25,7 @@ const SpecificSearchPage = () => {
   useEffect(() => {
     setLoading(true); // Ensure loading is set correctly on re-fetch
     fetch(
-      `http://localhost:5000/search?name=${encodeURIComponent(
+      `/api/search?name=${encodeURIComponent(
         moviename
       )}&page=${encodeURIComponent(currentPage)}`
     )
@@ -42,7 +42,7 @@ const SpecificSearchPage = () => {
 
   useEffect(() => {
     setLoading(true); // Ensure loading is set correctly on re-fetch
-    fetch(`http://localhost:5000/search?name=${encodeURIComponent(moviename)}`)
+    fetch(`/api/search?name=${encodeURIComponent(moviename)}`)
       .then((res) => res.json())
       .then((data) => {
         setMoviesData(data); // Assume the backend sends enriched movie data

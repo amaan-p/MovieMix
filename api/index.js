@@ -21,7 +21,7 @@ const options = {
 app.use(cors());
 
 // Search endpoint
-app.get("/search", async (req, res) => {
+app.get("/api/search", async (req, res) => {
   try {
     const movieName = req.query.name;
     const pagenumber = req.query.page;
@@ -44,7 +44,7 @@ app.get("/search", async (req, res) => {
 });
 
 // Trending movies endpoint
-app.get("/trending", async (req, res) => {
+app.get("/api/trending", async (req, res) => {
   try {
     const response = await fetch(`${BASE_URL}/trending/movie/day`, options);
     const data = await response.json();
@@ -57,7 +57,7 @@ app.get("/trending", async (req, res) => {
 
 
 // Search endpoint
-app.get("/moviedetails", async (req, res) => {
+app.get("/api/moviedetails", async (req, res) => {
   try {
     const movieId = req.query.id;
     if (!movieId) {
@@ -90,7 +90,6 @@ app.get("/moviedetails", async (req, res) => {
 
     // Add streaming providers for US (default to empty object if not found)
     movieData.stream = streamData.results && streamData.results.US ? streamData.results.US : {};
-    console.log(movieData)
     res.json(movieData);
   } catch (error) {
     console.error("Error fetching movie details:", error.message);
@@ -101,7 +100,7 @@ app.get("/moviedetails", async (req, res) => {
 
 
 // Trending movies endpoint
-app.get("/live", async (req, res) => {
+app.get("/api/live", async (req, res) => {
   try {
     const response = await fetch(`${BASE_URL}/trending/movie/day`, options);
     const data = await response.json();
@@ -124,7 +123,7 @@ app.get("/live", async (req, res) => {
 });
 
 //toprated movies endpoint
-app.get("/top_rated", async (req, res) => {
+app.get("/api/top_rated", async (req, res) => {
   try {
     const response = await fetch(
       `${BASE_URL}/movie/top_rated?language=en-US&page=1`,
@@ -139,4 +138,22 @@ app.get("/top_rated", async (req, res) => {
   }
 });
 
+
+
+//popilar movies endpoint
+app.get("/api/popular", async (req, res) => {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/movie/popular?language=en-US&page=1`,
+      options
+    );
+    const data = await response.json();
+
+    res.json(data);
+  } catch (error) {
+    console.error("Error fetching popular movies:", error);
+    res.status(500).json({ error: "Failed to fetch trending movies" });
+  }
+}
+)
 app.listen(5000, () => console.log("Server running on port 5000"));

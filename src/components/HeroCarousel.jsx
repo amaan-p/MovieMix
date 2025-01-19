@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
-
-const HeroCarousel = ({ movies, onMovieSelect }) => {
+import { NavLink } from "react-router";
+const HeroCarousel = ({ movies}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -34,13 +34,7 @@ const HeroCarousel = ({ movies, onMovieSelect }) => {
     }, 500);
   };
 
-  const handleMovieClick = (movieid) => {
-    if (onMovieSelect) {
-      onMovieSelect(movieid);
-    } else {
-      window.location.href = `/${movieid}`;
-    }
-  };
+
 
   const currentMovie = movies[currentIndex];
 
@@ -111,18 +105,23 @@ const HeroCarousel = ({ movies, onMovieSelect }) => {
                     </p>
                   )}
                   <div className="flex space-x-4">
+                    <NavLink  to={`/${currentMovie.id}`}>
                     <button
-                      onClick={() => handleMovieClick(currentMovie.id)}
                       className="px-8 py-2 bg-white text-black rounded hover:bg-white/90 flex items-center"
                     >
                       Play
                     </button>
+                    </NavLink>
+                    
+
+                    <NavLink  to={`/${currentMovie.id}`}>
                     <button
-                      onClick={() => handleMovieClick(currentMovie.id)}
                       className="px-8 py-2 bg-gray-500/50 text-white rounded hover:bg-gray-500/40"
                     >
                       More Info
                     </button>
+                    </NavLink>
+                   
                   </div>
                 </div>
               </>

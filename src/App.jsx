@@ -5,6 +5,7 @@ import Seachpage from "./components/Seachpage";
 import SpecificSearchPage from "./components/SpecificSearchPage";
 import MovieDetails from "./components/MovieDetails";
 import Movies from "./components/Movies";
+import LatestMovies from "./components/LatestMovies";
 const App = () => {
   return (
     <div className="bg-gradient-to-b from-black to-slate-950 min-h-screen">
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/search/:moviename" element={<SpecificSearchPage />} />
             <Route path="/:movieid" element={<MovieDetails />} />
             <Route path="/movies" element={<Movies />} />
+            <Route path="/popular" element={<LatestMovies />} />
             <Route path="/*" element={<div className="flex justify-center text-4xl text-white">Sorry Not Found</div>} />
           </Routes>
         </BrowserRouter>

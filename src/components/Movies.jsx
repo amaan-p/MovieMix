@@ -12,7 +12,7 @@ const Movies = () => {
 
   const fetchMovie = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/moviedetails?id=${id}`);
+      const res = await fetch(`/api/moviedetails?id=${id}`);
       if (!res.ok) throw new Error("Failed to fetch movie details");
       const data = await res.json();
 
@@ -91,7 +91,7 @@ const Movies = () => {
             </div>
           ) : (
             <>
-              <span className="relative z-10">I'm Feeling Lucky</span>
+              <span className="relative z-10">Roll The Dice</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </>
           )}
