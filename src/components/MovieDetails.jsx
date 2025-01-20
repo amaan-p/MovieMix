@@ -8,18 +8,18 @@ const MovieDetails = () => {
   const [movieDetails, setMoviesData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch(`/api/moviedetails?id=${id}`)
+ useEffect(() => {
+    fetch(`/api/moviedetails?id=${movieid}`)
       .then((res) => res.json())
       .then((data) => {
-        setMoviesData(data); // Assume the backend sends enriched movie data
+        setMoviesData(data);
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching Live movies:", error);
+        console.error("Error fetching movie details:", error);
         setLoading(false);
       });
-  }, [id]);
+  }, [movieid, location.key]);
 
   if (loading)
     return (
