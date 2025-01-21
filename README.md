@@ -31,7 +31,7 @@ This app uses the VidSrc API, which means:
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/yourusername/movieflix.git
+   git clone https://github.com/yourusername/MovieMix.git
    ```
 
 2. Install dependencies
