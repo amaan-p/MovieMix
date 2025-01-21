@@ -67,27 +67,24 @@ const SpecificSearchPage = () => {
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 pb-8">
             {movies.results.map((movie, index) =>
               movie.poster_path ? (
-<NavLink key={index} to={`/${movie.id}`}>
-
-<div
-                  key={index}
-                  className="transform transition-transform duration-200 hover:scale-105"
-                >
-                  <div className="rounded-lg overflow-hidden">
-                    <img
-                      src={
-                        movie.poster_path
-                          ? `https://image.tmdb.org/t/p/original${movie.poster_path}`
-                          : "/placeholder-image.png" // Fallback image
-                      }
-                      alt={movie.title || "Movie Poster"}
-                      className="h-auto"
-                    />
+                <NavLink key={index} to={`/${movie.id}`}>
+                  <div
+                    key={index}
+                    className="transform transition-transform duration-200 hover:scale-105"
+                  >
+                    <div className="rounded-lg overflow-hidden">
+                      <img
+                        src={
+                          movie.poster_path
+                            ? `https://image.tmdb.org/t/p/original${movie.poster_path}`
+                            : "/placeholder-image.png" // Fallback image
+                        }
+                        alt={movie.title || "Movie Poster"}
+                        className="h-auto"
+                      />
+                    </div>
                   </div>
-                </div>
-</NavLink>
-
-                
+                </NavLink>
               ) : (
                 <></>
               )

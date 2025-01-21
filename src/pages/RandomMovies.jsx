@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-const Movies = () => {
+const RandomMovies = () => {
   const [randomId, setRandomId] = useState(0);
   const [movieDetails, setMovieDetails] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -190,4 +190,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default RandomMovies;
